@@ -1,5 +1,7 @@
 # My config files
 
+This is based off of [Steven Harman's config files repo](https://github.com/stevenharman/config). Many thanks, Mr. Harman.
+
 ## Setup
 
 The following rake tasks will set up symbolic links in your home directory for
@@ -15,21 +17,9 @@ or
 rake symlink:force
 ```
 
-### Windows
-
-The following rake task will tweak a few of the default configs to better
-behave on Windows
-
-```bash
-rake windows
-```
-
 ## Dependencies
 
 At least the following are required, and I'll continue to add more as I
 re-discover them:
 
 - `brew install ack`
-- `brew install ctags`
-- `gem install gem-ctags && gem ctags`
-
