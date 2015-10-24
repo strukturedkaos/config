@@ -3,4 +3,3 @@ tmp/
 tags
 *.swp
 *.swo
-vim.symlink/bundle
