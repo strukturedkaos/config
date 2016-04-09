@@ -60,3 +60,24 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+set runtimepath^=~/.vim/bundle/ag
+
+" ag.vim to always start searching from your project root instead of the cwd
+let g:ag_working_path_mode="r"
+
+" ctrl p ignore
+set wildignore+=*/tmp/*,*/dist/*,*/node_modules/*,*.so,*.swp,*.zip     " MacOSX/Linux
+
+function! PropagatePasteBufferToOSX()
+  let @n=getreg("*")
+  call system('pbcopy-remote', @n)
+  echo "done"
+endfunction
+
+function! PopulatePasteBufferFromOSX()
+  let @+ = system('pbpaste-remote')
+  echo "done"
+endfunction
+
+nnoremap <leader>6 :call PopulatePasteBufferFromOSX()<cr>
+nnoremap <leader>7 :call PropagatePasteBufferToOSX()<cr>

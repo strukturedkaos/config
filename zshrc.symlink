@@ -3,7 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
-export ZSH_THEME="smh"
+export ZSH_THEME="agnoster"
 
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
@@ -36,3 +36,8 @@ source ~/.zsh/aliases.zsh
 # get around current directory as "~rvm_rvmrc_cwd" weirdness
 unsetopt auto_name_dirs
 
+
+export NVM_DIR="/home/donpottinger/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
